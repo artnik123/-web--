@@ -1,4 +1,3 @@
-<!-- resources/views/about.blade.php -->
 @extends('layouts.main')
 
 @section('title', 'О нас')

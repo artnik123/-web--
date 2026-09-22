@@ -1,4 +1,3 @@
-<!-- resources/views/home.blade.php -->
 @extends('layouts.main')
 
 @section('title', 'Главная страница')

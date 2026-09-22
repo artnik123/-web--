@@ -1,4 +1,3 @@
-<!-- resources/views/contacts.blade.php -->
 @extends('layouts.main')
 
 @section('title', 'Контакты')
@@ -6,8 +5,6 @@
 @section('content')
     <h1>Контакты</h1>
     <p>Свяжитесь с нами любым удобным для вас способом:</p>
-
-    <!-- Динамический вывод данных из массива через Blade -->
     <ul>
         <li><strong>Телефон:</strong> {{ $contactInfo['phone'] }}</li>
         <li><strong>Email:</strong> <a href="mailto:{{ $contactInfo['email'] }}">{{ $contactInfo['email'] }}</a></li>

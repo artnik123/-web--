@@ -1,4 +1,3 @@
-<!-- resources/views/layouts/main.blade.php -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -18,7 +17,6 @@
 
     <header>
         <nav>
-            <!-- Ссылки на страницы сайта с использованием хелпера route() -->
             <a href="{{ route('home') }}">Главная</a>
             <a href="{{ route('about') }}">О нас</a>
             <a href="{{ route('contacts') }}">Контакты</a>
@@ -26,12 +24,11 @@
     </header>
 
     <main>
-        <!-- Сюда будет подставляться контент дочерних страниц -->
         @yield('content')
     </main>
 
     <footer>
-        <p>ФИО: Ооржак Дандар | Группа: 251-3210</p>
+        <p>ФИО: Ооржак Дандар и Перетрутов Никита| Группа: 251-3210</p>
     </footer>
 
 </body>
