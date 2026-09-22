@@ -2,24 +2,45 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Главная страница (заменили welcome на home)
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
+
+// Главная страница
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('welcome');
+});
 
 // Страница "О нас"
 Route::get('/about', function () {
     return view('about');
-})->name('about');
+});
 
-// Страница "Контакты"
+// Страница "Контакты" с массивом данных
 Route::get('/contacts', function () {
-    $data = [
-        'phone' => '+7 (999) 123-45-67',
-        'email' => 'info@laraveltest.local',
-        'address' => 'г. Москва, ул. Академика Королева, д. 12',
-        'work_hours' => 'Пн-Пт: с 9:00 до 18:00'
+    // Создаем массив данных
+    $contacts = [
+        [
+            'name' => 'Перетрутов Никита Артемович',
+            'phone' => '+7 (800) 555 35 35',
+            'email' => 'artnik6002@gmail.com',
+            'position' => 'CEO'
+        ],
+        [
+            'name' => 'Марк Цукерберг Олегович',
+            'phone' => '+7 (993) 993 10 07',
+            'email' => 'petrov@example.com',
+            'position' => 'Уборщик'
+        ],
+        [
+            'name' => 'Илон Маск Максимович',
+            'phone' => '+7 (999) 111-22-33',
+            'position' => 'Доставщик пицыы'
+        ]
     ];
-
-    return view('contacts', ['contactInfo' => $data]);
-})->name('contacts');
+    
+    // Передаем данные в представление
+    return view('contacts', ['contacts' => $contacts]);
+});
